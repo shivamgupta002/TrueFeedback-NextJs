@@ -16,8 +16,7 @@ async function dbConnect(): Promise<void> {
 
     console.log(db);
 
-    connection.isConnected = db.connection[0].readyState;
-    console.log(db.connection);
+    connection.isConnected = db.connections[0].readyState;
     console.log("DB connected Successfully");
   } catch (error) {
     console.log("Database connection error: " + error);
